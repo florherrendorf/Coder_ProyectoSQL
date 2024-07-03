@@ -5,6 +5,8 @@ CREATE DATABASE Reparto_Agua;
 
 -- CREACIÓN DE LAS TABLAS
 
+USE Reparto_Agua;
+
 CREATE TABLE vehiculos (
 id_patente		VARCHAR(7)	NOT NULL UNIQUE,
 marca			VARCHAR(20)	NOT NULL,
