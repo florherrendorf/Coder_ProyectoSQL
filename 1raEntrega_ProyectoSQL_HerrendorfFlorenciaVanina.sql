@@ -171,6 +171,20 @@ FOREIGN KEY (id_producto) REFERENCES precios(id_producto)
 );
 
 
+ALTER TABLE domicilios 
+CHANGE COLUMN latitud latitud DECIMAL(17,13) NULL ,
+CHANGE COLUMN longitud longitud DECIMAL(17,13) NULL ;
+
+ALTER TABLE domicilios 
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (id_domicilio),
+ADD FOREIGN KEY (id_localidad) REFERENCES localidades(id_localidad);
+
+ALTER TABLE domicilios 
+CHANGE COLUMN calle	calle varchar(100)	NOT NULL;
+
+
+
 -- CARGA DE LAS TABLAS (a continuar)
 
 
